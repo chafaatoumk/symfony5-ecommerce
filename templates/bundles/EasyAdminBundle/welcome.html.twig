@@ -1,0 +1,29 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Dasboard' %}
+
+{% block page_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card alert-info text-bold text-center">
+                    <div class="card-header">Products</div>
+                    <div class="card-body display-4">{{ countAllProducts }}</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card alert-primary text-bold text-center">
+                    <div class="card-header">Categories</div>
+                    <div class=" card-body display-4">{{ countAllCategories }}</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card alert-success text-bold text-center">
+                    <div class="card-header">Customers</div>
+                    <div class=" card-body display-4">{{ countAllUsers }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

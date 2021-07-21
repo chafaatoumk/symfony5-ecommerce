@@ -19,6 +19,14 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
+    public function countAllCategories()
+    {
+        $categories = $this->findAll();
+        $count = count($categories);
+
+        return $count;
+    }
+
     // /**
     //  * @return Category[] Returns an array of Category objects
     //  */

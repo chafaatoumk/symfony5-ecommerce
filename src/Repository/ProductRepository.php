@@ -19,6 +19,14 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
+    public function countAllProducts()
+    {
+        $products = $this->findAll();
+        $count = count($products);
+
+        return $count;
+    }
+
     // /**
     //  * @return Product[] Returns an array of Product objects
     //  */
