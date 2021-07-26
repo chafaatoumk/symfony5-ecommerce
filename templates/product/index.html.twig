@@ -47,7 +47,10 @@
                       <p class="price"> 
                         <del></del>€ {{ product.price | number_format(0, ',', ' ')}} 
                       </p>
-                      <p class="buttons"><a href="{{ path('product-detail', { 'id': product.id }) }}" class="btn btn-outline-secondary">View detail</a><a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a></p>
+                      <p class="buttons">
+                        <a href="{{ path('product-detail', { 'id': product.id }) }}" class="btn btn-outline-secondary">View detail</a>
+                        <a href="{{ path('cart-add', {'id': product.id }) }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                      </p>
                     </div>
                     <!-- /.text-->
                   </div>

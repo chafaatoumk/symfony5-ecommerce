@@ -28,6 +28,14 @@ class ProductRepository extends ServiceEntityRepository
     }
 
     /**
+     * @return Product[]
+     */
+    public function findSearch() : array
+    {
+        return $this->findAll();
+    }
+
+    /**
      * @return Product[] Returns an array of Product objects
       */
     public function findByUser($value)

@@ -81,7 +81,10 @@
                     <h1 class="text-center"> {{ product.name }} </h1>
                     <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material &amp; care and sizing</a></p>
                     <p class="price">€ {{ product.price | number_format(0, ',', ' ')}}</p>
-                    <p class="text-center buttons"><a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a><a href="basket.html" class="btn btn-outline-primary"><i class="fa fa-heart"></i> Add to wishlist</a></p>
+                    <p class="text-center buttons">
+                      <a href="{{ path('cart-add', {'id': product.id }) }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                      <a href="{{ path('cart-add', {'id': product.id }) }}" class="btn btn-outline-primary"><i class="fa fa-heart"></i> Add to wishlist</a>
+                    </p>
                   </div>
                   <div data-slider-id="1" class="owl-thumbs">
                     <button class="owl-thumb-item"><img src="img/detailsquare.jpg" alt="" class="img-fluid"></button>
